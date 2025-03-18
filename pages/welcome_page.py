@@ -13,7 +13,7 @@ class WelcomePage(QWidget):
         
         # Animation
         self.animation_label = QLabel()
-        movie = QMovie(":/resources/animation.gif")
+        movie = QMovie(":../resources/animation.gif")
         self.animation_label.setMovie(movie)
         movie.start()
         

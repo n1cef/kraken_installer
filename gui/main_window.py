@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QMainWindow, QStackedWidget
 from pages.welcome_page import WelcomePage
-#from pages.partition_page import PartitionPage
+from pages.partition_page import PartitionPage
 #from pages.rsync_page import RsyncPage
 #from pages.grub_page import GrubPage
 #from pages.location_page import LocationPage
@@ -12,7 +12,7 @@ class InstallerWindow(QMainWindow):
         self.stacked_widget = QStackedWidget()
         self.pages = [
            WelcomePage(self),
-            #PartitionPage(self),
+            PartitionPage(self),
             #RsyncPage(self),
             # GrubPag(self),
             #LocationPag(self),
