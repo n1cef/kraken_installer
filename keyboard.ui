@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Keyboard</class>
+ <widget class="QWidget" name="Keyboard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1080</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <pointsize>35</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:&quot;blue&quot;;</string>
+     </property>
+     <property name="text">
+      <string>keyboard configuration </string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Select System Language</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="comboBoxLanguage">
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>French (FR)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>English</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_4">
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Select Keyboard Layout</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="comboBoxKeyboard">
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>AZERTY</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Qwerty</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="textEditPreview"/>
+   </item>
+   <item>
+    <widget class="QPushButton" name="keyboard_btn">
+     <property name="text">
+      <string>Next</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
