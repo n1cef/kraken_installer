@@ -1,5 +1,5 @@
 
-<h1 align="center">kraken_installer</h1>
+<h1 align="center">kraken installer</h1>
 
 ###
 
