@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Kraken Install
+Comment=Start the Kraken Install application
+Exec=/usr/bin/krakeninstall
+Icon=krakeninstall
+Terminal=false
+Type=Application
+Categories=Utility;

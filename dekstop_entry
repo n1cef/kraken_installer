@@ -1,0 +1,14 @@
+sudo cp krakeninstall.desktop /usr/share/applications/
+
+
+sudo cp krakeninstall.png /usr/share/icons/hicolor/48x48/apps/
+
+#refresh icon cache 
+sudo gtk-update-icon-cache /usr/share/icons/hicolor/
+
+#cp the executable 
+
+sudo cp /build/kraken /usr/local/bin/krakeninstall  
+
+sudo ln -s /usr/local/bin/krakeninstall /usr/bin/krakeninstall 
+sudo chmod +x /usr/bin/krakeninstall 
