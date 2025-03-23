@@ -4,7 +4,7 @@
 ###
 
 <div align="center">
-  <img height="206"  width="600" src="https://as1.ftcdn.net/jpg/05/61/65/40/1000_F_561654098_KDGDIAOIm6JToNF7ncaRzI61jLTA6GZt.webp" />
+  <img height="350"  width="600" src="https://as1.ftcdn.net/jpg/05/61/65/40/1000_F_561654098_KDGDIAOIm6JToNF7ncaRzI61jLTA6GZt.webp" />
 </div>
 
 ###
