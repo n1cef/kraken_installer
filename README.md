@@ -15,13 +15,7 @@
   
 </div>
 
-**A Qt6-based GUI application** that simplifies kraken_os installation  by generating JSON configurations, extracting installation parameters, and running external install scripts.  
 
-## 🖥️ Features  
-- **Graphical User Interface (GUI)**: Built with **Qt6** for a modern and intuitive experience.  
-- **JSON Configuration**: Dynamically generate and validate installation parameters.  
-- **Script Integration**: Execute custom install scripts (Bash) stored in the [Kraken Installer TUI](https://github.com/n1cef/kraken_installer_tui) repository.  
-- **Cross-Platform**: Works on Windows, Linux, and macOS (Qt6 compatibility).  
 
 
 
@@ -33,11 +27,15 @@
  dependency:
  <h3><br></h3>
   cmake
-   <h3><br></h3>
-
   qt6
- <h3> this app generate a json file and then  extract her content </h3>
+ 
+**A Qt6-based GUI application** that simplifies kraken_os installation  by generating JSON configurations, extracting installation parameters, and running external install scripts.  
 
+## 🖥️ Features  
+- **Graphical User Interface (GUI)**: Built with **Qt6** for a modern and intuitive experience.  
+- **JSON Configuration**: Dynamically generate and validate installation parameters.  
+- **Script Integration**: Execute custom install scripts (Bash) stored in the [Kraken Installer TUI](https://github.com/n1cef/kraken_installer_tui) repository.  
+- **Cross-Platform**: Works on Windows, Linux, and macOS (Qt6 compatibility).  
 
 
 
