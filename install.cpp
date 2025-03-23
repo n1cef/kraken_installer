@@ -2,7 +2,9 @@
 #include "ui_install.h"
 #include <QFile>
 #include <QMessageBox>
+
 #include <QJsonDocument>
+#include <QJsonParseError>
 #include <QDir>
 #include <QDebug>
 #include <QTextCursor>
@@ -14,6 +16,9 @@ Install::Install(QWidget *parent)
 
 {
     ui->setupUi(this);
+    ui->progressBar->setRange(0, 100);
+    ui->progressBar->setValue(0);
+    ui->statusLabel->setText("Waiting to start...");
     process = new QProcess(this);
 
     connect(process, &QProcess::readyReadStandardOutput,
@@ -27,6 +32,50 @@ Install::Install(QWidget *parent)
 }
 
 
+QJsonObject Install::loadSettings()
+{
+    QFile file("/home/settings.json");
+    if (!file.open(QIODevice::ReadOnly)) {
+        appendToConsole("Error: Could not open settings file!", Qt::red);
+        return QJsonObject();
+    }
+
+    QJsonParseError parseError;
+    QJsonDocument doc = QJsonDocument::fromJson(file.readAll(), &parseError);
+    if (parseError.error != QJsonParseError::NoError) {
+        appendToConsole("JSON Parse Error: " + parseError.errorString(), Qt::red);
+        return QJsonObject();
+    }
+
+    return doc.object();
+}
+
+
+bool Install::validateSettings(const QJsonObject& settings)
+{
+    QStringList requiredFields = {
+        "partition/disk_path", "partition/enable_swap", "partition/separate_home",
+        "user/username", "user/password", "language", "keyboard", "user/hostname", "timezone"
+    };
+
+    foreach(const QString& field, requiredFields) {
+        QStringList parts = field.split('/');
+        QJsonValue val = settings;
+        foreach(const QString& part, parts) {
+            val = val[part];
+            if(val.isUndefined()) {
+                appendToConsole("Missing field: " + field, Qt::red);
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+
+
+
+
 
 void Install::updateProgress(int value)
 {
@@ -36,39 +85,72 @@ void Install::updateProgress(int value)
 
 void Install::on_install_btn_clicked()
 {
-    // Clear previous output
     ui->outputConsole->clear();
-    appendToConsole("Starting script execution...", Qt::blue);
+    appendToConsole("Loading settings...", Qt::blue);
 
-    QString scriptPath = "/home/kraken.sh";
+    QJsonObject settings = loadSettings();
+    if(settings.isEmpty()) return;
 
-    if(!QFile::exists(scriptPath)) {
-        appendToConsole("Error: Script not found!", Qt::red);
+    if(!validateSettings(settings)) {
+        appendToConsole("Invalid settings configuration!", Qt::red);
         return;
     }
 
-    process->start("bash", QStringList() << scriptPath);
-    connect(process, &QProcess::errorOccurred, [this](QProcess::ProcessError error) {
-        appendToConsole("Error: " + process->errorString(), Qt::red);
-    });
+    // Extract parameters
+    QJsonObject partition = settings["partition"].toObject();
+    QJsonObject user = settings["user"].toObject();
+
+    QStringList params = {
+        partition["disk_path"].toString(),
+        partition["separate_home"].toString(),
+        partition["enable_swap"].toString(),
+        user["username"].toString(),
+        user["password"].toString(),
+        settings["language"].toString(),
+        settings["keyboard"].toString(),
+        user["hostname"].toString(),
+        settings["timezone"].toString()
+    };
+
+    appendToConsole("Starting installation...", Qt::blue);
+
+    QString scriptPath = "/home/kraken.sh";
+    process->start("bash", QStringList() << scriptPath << params);
 }
+
+
+
+
 
 
 void Install::handleStandardOutput()
 {
     QByteArray output = process->readAllStandardOutput();
-    appendToConsole(QString::fromUtf8(output), Qt::black);
+    QString message = QString::fromUtf8(output);
 
-    // Simple progress detection (customize for your script)
-    if(output.contains("Progress:")) {
-        int progress = output.split(':').last().trimmed().toInt();
-        updateProgress(progress);
+    // Handle progress updates
+    if(message.startsWith("PROGRESS:")) {
+        QStringList parts = message.split(":");
+        if(parts.count() >= 3) {
+            int progress = parts[1].toInt();
+            QString status = parts[2].trimmed();
+
+            ui->progressBar->setValue(progress);
+            ui->statusLabel->setText(status);
+        }
+    }
+    else {
+        appendToConsole(message, Qt::black);
     }
 }
 
 void Install::handleStandardError()
 {
     QByteArray error = process->readAllStandardError();
+    if(error.contains("ERROR:")) {
+        QStringList parts = QString::fromUtf8(error).split(":");
+        ui->statusLabel->setText(parts.last().trimmed());
+    }
     appendToConsole(QString::fromUtf8(error), Qt::red);
 }
 

@@ -34,6 +34,8 @@ private slots:
     void handleScriptOutput(int exitCode, QProcess::ExitStatus exitStatus);
 private:
     Ui::Install *ui;
+    QJsonObject loadSettings();
+    bool validateSettings(const QJsonObject& settings);
     void appendToConsole(const QString &text, const QColor &color = Qt::black);
     QProcess *process;
 
