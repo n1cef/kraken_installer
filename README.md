@@ -10,7 +10,9 @@
 ###
 
 > [!WARNING]  
+
 > Kraken Installer  is under development and not complete yet! Use at your own risk.
+
 <div align="left">
   
 </div>
@@ -121,6 +123,5 @@ sudo cp krakeninstall.png /usr/share/icons/hicolor/48x48/apps/
 ```sh
 sudo gtk-update-icon-cache /usr/share/icons/hicolor/
 ```
-
 
 
