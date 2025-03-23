@@ -63,10 +63,11 @@ MainWindow::MainWindow(QWidget *parent)
 
     Install* installPage= new Install();
     ui->stackedWidget->addWidget(installPage);
-    connect(installPage, &Install::nextButtonClicked,  // FIXED: No parentheses!
+    //connect(installPage, &Install::nextButtonClicked,  // FIXED: No parentheses!
+          //  this, &MainWindow::switchToFinishPage);
+
+    connect(installPage, &Install::installationComplete,
             this, &MainWindow::switchToFinishPage);
-
-
 
 
 

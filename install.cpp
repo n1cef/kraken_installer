@@ -2,85 +2,110 @@
 #include "ui_install.h"
 #include <QFile>
 #include <QMessageBox>
-#include <QJsonArray>
-#include <QJsonObject>
 #include <QJsonDocument>
 #include <QDir>
+#include <QDebug>
+#include <QTextCursor>
+#include <QProcessEnvironment>
+
 Install::Install(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Install)
+
 {
     ui->setupUi(this);
-    connect(ui->install_btn, &QPushButton::clicked,
-            this, &Install::nextButtonClicked);
+    process = new QProcess(this);
+
+    connect(process, &QProcess::readyReadStandardOutput,
+            this, &Install::handleStandardOutput);
+    connect(process, &QProcess::readyReadStandardError,
+            this, &Install::handleStandardError);
+    connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+            this, &Install::handleScriptOutput);
+
+    appendToConsole("Ready to execute scripts...", Qt::gray);
+}
+
+
+
+void Install::updateProgress(int value)
+{
+    ui->progressBar->setValue(value);
+    ui->statusLabel->setText(QString("Progress: %1%").arg(value));
+}
+
+void Install::on_install_btn_clicked()
+{
+    // Clear previous output
+    ui->outputConsole->clear();
+    appendToConsole("Starting script execution...", Qt::blue);
+
+    QString scriptPath = "/home/kraken.sh";
+
+    if(!QFile::exists(scriptPath)) {
+        appendToConsole("Error: Script not found!", Qt::red);
+        return;
+    }
+
+    process->start("bash", QStringList() << scriptPath);
+    connect(process, &QProcess::errorOccurred, [this](QProcess::ProcessError error) {
+        appendToConsole("Error: " + process->errorString(), Qt::red);
+    });
+}
+
+
+void Install::handleStandardOutput()
+{
+    QByteArray output = process->readAllStandardOutput();
+    appendToConsole(QString::fromUtf8(output), Qt::black);
+
+    // Simple progress detection (customize for your script)
+    if(output.contains("Progress:")) {
+        int progress = output.split(':').last().trimmed().toInt();
+        updateProgress(progress);
+    }
+}
+
+void Install::handleStandardError()
+{
+    QByteArray error = process->readAllStandardError();
+    appendToConsole(QString::fromUtf8(error), Qt::red);
+}
+
+
+void Install::appendToConsole(const QString &text, const QColor &color)
+{
+    QTextCharFormat format;
+    format.setForeground(color);
+
+    QTextCursor cursor(ui->outputConsole->document());
+    cursor.movePosition(QTextCursor::End);
+    cursor.insertText(text, format);
+
+    // Auto-scroll to bottom
+    ui->outputConsole->verticalScrollBar()->setValue(
+        ui->outputConsole->verticalScrollBar()->maximum()
+        );
 }
 
 
 
 
-
-void Install::startInstallation() {
-    // Generate script
-    generateInstallScript();
-
-    // Execute with pkexec (GUI sudo)
-    installProcess = new QProcess(this);
-    connect(installProcess, &QProcess::readyReadStandardOutput, this, &Install::onReadyRead);
-    connect(installProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
-            this, &Install::onProcessFinished);
-
-    installProcess->start("pkexec", {"bash", generatedScriptPath});
-}
-
-void Install::onReadyRead() {
-    QString output = installProcess->readAllStandardOutput();
-    ui->outputConsole->appendPlainText(output);
-
-    // Update progress (example heuristic)
-    if(output.contains("INSTALLING")) ui->progressBar->setValue(40);
-    if(output.contains("CONFIGURING")) ui->progressBar->setValue(75);
-}
-
-void Install::generateInstallScript() {
-    // Read settings.json
-    QFile configFile("/home/settings.json");
-    configFile.open(QIODevice::ReadOnly);
-    QJsonDocument configDoc = QJsonDocument::fromJson(configFile.readAll());
-
-    // Generate script using template
-    generatedScriptPath = QDir::tempPath() + "/home/kraken_install.sh";
-    QFile scriptFile(generatedScriptPath);
-    scriptFile.open(QIODevice::WriteOnly);
-
-    QString scriptContent = QString(R"(
-        #!/bin/bash
-        echo "Starting installation..."
-        DISK=%1
-        USERNAME=%2
-        # ... more variables ...
-    )").arg(configDoc["partition"]["disk_path"].toString(),
-                                     configDoc["user"]["username"].toString());
-
-    scriptFile.write(scriptContent.toUtf8());
-    scriptFile.setPermissions(QFile::ExeOwner | QFile::ReadOwner);
-}
-
-void Install::onProcessFinished(int exitCode, QProcess::ExitStatus exitStatus) {
-    Q_UNUSED(exitStatus)  // Optional: if not using this parameter
-
-    if(exitCode == 0) {
-        ui->outputConsole->appendPlainText("\nInstallation completed successfully!");
-        ui->progressBar->setValue(100);
+void Install::handleScriptOutput(int exitCode, QProcess::ExitStatus exitStatus)
+{
+    if(exitStatus == QProcess::NormalExit && exitCode == 0) {
+        appendToConsole("\nScript completed successfully!\n", Qt::darkGreen);
+        emit installationComplete();  // Add this signal
     } else {
-        ui->outputConsole->appendPlainText("\nInstallation failed!");
-        QMessageBox::critical(this, "Error", "Installation process exited with code: "
-                                                 + QString::number(exitCode));
+        appendToConsole(QString("\nScript failed with code %1\n").arg(exitCode), Qt::red);
     }
 }
 
 
 
-Install::~Install()
-{
+
+
+Install::~Install() {
+
     delete ui;
 }

@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:&quot;#e6e4e4&quot;</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="label">
@@ -47,6 +50,9 @@
    </item>
    <item>
     <widget class="QComboBox" name="comboBoxLanguage">
+     <property name="layoutDirection">
+      <enum>Qt::LayoutDirection::LeftToRight</enum>
+     </property>
      <property name="styleSheet">
       <string notr="true">QComboBox {
     padding: 5px;
@@ -54,14 +60,25 @@
     border-radius: 4px;
 }</string>
      </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
      <item>
       <property name="text">
-       <string>French (FR)</string>
+       <string>French</string>
       </property>
      </item>
      <item>
       <property name="text">
        <string>English</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Arabic</string>
       </property>
      </item>
      <item>
@@ -94,7 +111,10 @@
      </property>
      <item>
       <property name="text">
-       <string>AZERTY</string>
+       <string>Azerty</string>
+      </property>
+      <property name="icon">
+       <iconset theme="QIcon::ThemeIcon::Computer"/>
       </property>
      </item>
      <item>

@@ -127,13 +127,12 @@ void Partition::savePartitionSettings() {
     // Create partition settings object
     QJsonObject partitionSettings;
     partitionSettings["disk_path"] = selectedDisk->text(0);
-    partitionSettings["disk_size_gb"] = diskSizeGB;
-    partitionSettings["enable_swap"] = ui->swapCheckBox->isChecked();
-    partitionSettings["separate_home"] = ui->homeCheckBox->isChecked();
+    partitionSettings["separate_home"] = ui->homeCheckBox->isChecked() ? "yes" : "no";
+    partitionSettings["enable_swap"] = ui->swapCheckBox->isChecked() ? "yes" : "no";
 
     // Merge with existing settings
-    QFile file("settings.json");
-    if(file.open(QIODevice::ReadWrite | QIODevice::Text)) {
+    QFile file("/home/settings.json");
+    if(file.open(QIODevice::ReadWrite)) {
         QJsonDocument doc = QJsonDocument::fromJson(file.readAll());
         QJsonObject root = doc.object();
 

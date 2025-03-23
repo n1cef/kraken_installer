@@ -16,7 +16,7 @@ class User : public QWidget
 public:
     explicit User(QWidget *parent = nullptr);
     ~User();
-    void saveUserSettings();
+    bool saveUserSettings();
 
 signals:
     void nextButtonClicked();

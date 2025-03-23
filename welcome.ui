@@ -13,37 +13,37 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="welcome_btn">
-   <property name="geometry">
-    <rect>
-     <x>429</x>
-     <y>290</y>
-     <width>161</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Next</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>100</y>
-     <width>661</width>
-     <height>191</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>40</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>welcome to kraken installer </string>
-   </property>
-  </widget>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <pointsize>40</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:&quot;blue&quot;;</string>
+     </property>
+     <property name="text">
+      <string>  welcome to kraken os </string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="welcome_btn">
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Next</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

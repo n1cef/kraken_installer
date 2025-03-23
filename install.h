@@ -3,6 +3,10 @@
 
 #include <QWidget>
 #include <QProcess>
+#include <QJsonObject>
+#include <QScrollBar>
+#include <QTextCharFormat>
+#include <QMainWindow>
 namespace Ui {
 class Install;
 }
@@ -14,20 +18,26 @@ class Install : public QWidget
 public:
     explicit Install(QWidget *parent = nullptr);
     ~Install();
-signals:
-    void nextButtonClicked();
+//signals:
+   // void nextButtonClicked();
 
-public slots:
-    void startInstallation();
+signals:  // Uncomment this section
+    void installationComplete();
+//public slots:
+    //void startInstallation();
 
 private slots:
-    void onReadyRead();
-    void onProcessFinished(int exitCode, QProcess::ExitStatus status);
+    void updateProgress(int value);
+    void handleStandardOutput();
+    void handleStandardError();
+    void on_install_btn_clicked();  // Auto-connected via naming convention
+    void handleScriptOutput(int exitCode, QProcess::ExitStatus exitStatus);
 private:
     Ui::Install *ui;
-    QProcess *installProcess;
-    QString generatedScriptPath;
-    void generateInstallScript();
+    void appendToConsole(const QString &text, const QColor &color = Qt::black);
+    QProcess *process;
+
+
 };
 
 

@@ -69,7 +69,7 @@
     <widget class="QLabel" name="diskWarningLabel">
      <property name="font">
       <font>
-       <pointsize>20</pointsize>
+       <pointsize>30</pointsize>
        <bold>true</bold>
       </font>
      </property>
@@ -77,7 +77,7 @@
       <string notr="true">color:&quot;red&quot;;</string>
      </property>
      <property name="text">
-      <string>Minimum 50GB required</string>
+      <string>Minimum 50GB required please shose another disk</string>
      </property>
     </widget>
    </item>
@@ -107,6 +107,9 @@
      </property>
      <property name="text">
       <string>Enable swap partition</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
