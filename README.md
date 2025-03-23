@@ -24,9 +24,11 @@
 
 ###
 
+> [!INFO]
+> dependency:
+> cmake
+> qt6 
 
-
-###
 
 
 
