@@ -10,7 +10,7 @@
 ###
 
 >[!WARNING]  
-> Kraken Installer  is under development and not complete yet! Use at your own risk.
+> Kraken Installer is under development and not complete yet! Use at your own risk.
 
 <div align="left">
   
