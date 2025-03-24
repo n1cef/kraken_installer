@@ -91,6 +91,22 @@
     </widget>
    </item>
    <item>
+    <widget class="QPushButton" name="reboot_btn">
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:&quot;cyan&quot;</string>
+     </property>
+     <property name="text">
+      <string>reboot</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="label_2">
      <property name="font">
       <font>
@@ -99,13 +115,6 @@
      </property>
      <property name="text">
       <string/>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QPushButton" name="reboot_btn">
-     <property name="text">
-      <string>reboot</string>
      </property>
     </widget>
    </item>
