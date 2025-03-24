@@ -15,6 +15,9 @@ public:
     explicit Finish(QWidget *parent = nullptr);
     ~Finish();
 
+private slots:
+
+    void onRebootClicked();
 private:
     Ui::Finish *ui;
 };

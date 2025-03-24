@@ -26,7 +26,20 @@
       <string notr="true">color:&quot;blue&quot;;</string>
      </property>
      <property name="text">
-      <string>  welcome to kraken os </string>
+      <string>  Welcome to kraken os </string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="resources.qrc">:/images/kraken.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -38,6 +51,9 @@
        <bold>true</bold>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color:&quot;cyan&quot;</string>
+     </property>
      <property name="text">
       <string>Next</string>
      </property>
@@ -45,6 +61,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

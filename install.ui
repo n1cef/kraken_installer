@@ -71,6 +71,9 @@
        <bold>true</bold>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color:&quot;cyan&quot;;</string>
+     </property>
      <property name="text">
       <string>Start installation</string>
      </property>

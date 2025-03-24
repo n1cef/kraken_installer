@@ -32,6 +32,12 @@
    </item>
    <item>
     <widget class="QTreeWidget" name="diskTreeWidget">
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
      <column>
       <property name="text">
        <string>Device</string>

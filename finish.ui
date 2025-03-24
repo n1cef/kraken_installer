@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>789</width>
-    <height>609</height>
+    <width>1432</width>
+    <height>802</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,7 +26,8 @@
       <string notr="true">color:&quot;blue&quot;</string>
      </property>
      <property name="text">
-      <string>the installation terminate successfuly</string>
+      <string>the installation terminate successfuly 
+</string>
      </property>
     </widget>
    </item>
@@ -38,23 +39,71 @@
        <bold>true</bold>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color:&quot;cyan&quot;;</string>
+     </property>
      <property name="text">
-      <string>after press reboot please make sure to select boot existing os</string>
+      <string>Remember: After rebooting, select 'Boot Existing OS' from the boot menu.  </string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_6">
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string> **Unix Golden Rules**   
+    • sudo =POWER  → use your superpowers only when necessary.  
+    • Copy-pasting AI-generated commands blindly? Congrats, you just won a Broken System   
+    • You’ve escaped Microsoft’s clutches! 🐧 Welcome to the land of freedom .  
+    • &quot;Bill Gates didn’t send you here. You’re safe now.&quot; </string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QScrollBar" name="horizontalScrollBar">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="resources.qrc">:/images/finish.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QLabel" name="label_2">
+     <property name="font">
+      <font>
+       <kerning>true</kerning>
+      </font>
+     </property>
      <property name="text">
       <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>finish.png</pixmap>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="reboot_btn">
      <property name="text">
       <string>reboot</string>
      </property>
@@ -62,6 +111,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

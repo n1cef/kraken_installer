@@ -93,6 +93,9 @@
      <property name="echoMode">
       <enum>QLineEdit::EchoMode::Password</enum>
      </property>
+     <property name="placeholderText">
+      <string>Enter your user password </string>
+     </property>
     </widget>
    </item>
    <item>
@@ -112,6 +115,9 @@
      <property name="echoMode">
       <enum>QLineEdit::EchoMode::Password</enum>
      </property>
+     <property name="placeholderText">
+      <string>Retype the password</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -123,7 +129,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: bold 14pt;</string>
+      <string notr="true">font: bold 14pt;color:&quot;cyan&quot;;</string>
      </property>
      <property name="text">
       <string>Next</string>

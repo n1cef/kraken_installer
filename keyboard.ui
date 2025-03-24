@@ -134,6 +134,15 @@
    </item>
    <item>
     <widget class="QPushButton" name="keyboard_btn">
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:&quot;cyan&quot;</string>
+     </property>
      <property name="text">
       <string>Next</string>
      </property>
