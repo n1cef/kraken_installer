@@ -1,5 +1,5 @@
 
-<h1 align="center">kraken_installer</h1>
+<h1 align="center">kraken installer</h1>
 
 ###
 
@@ -9,9 +9,8 @@
 
 ###
 
-> [!WARNING]  
-
-> Kraken Installer  is under development and not complete yet! Use at your own risk.
+>[!WARNING]  
+> Kraken Installer is under development and not complete yet! Use at your own risk.
 
 <div align="left">
   
@@ -26,10 +25,7 @@
 ###
 
 > [!NOTE]
- dependency:
- 
-  cmake
-  qt6
+ dependency:    cmake   qt6
   <h3><br></h3>
  
 **A Qt6-based GUI application** that simplifies kraken_os installation  by generating JSON configurations, extracting installation parameters, and running external install scripts.  
