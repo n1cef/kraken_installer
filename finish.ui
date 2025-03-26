@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1432</width>
-    <height>802</height>
+    <width>872</width>
+    <height>603</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,8 +26,7 @@
       <string notr="true">color:&quot;blue&quot;</string>
      </property>
      <property name="text">
-      <string>the installation terminate successfuly 
-</string>
+      <string>the installation terminate successfuly </string>
      </property>
     </widget>
    </item>
@@ -43,14 +42,8 @@
       <string notr="true">color:&quot;cyan&quot;;</string>
      </property>
      <property name="text">
-      <string>Remember: After rebooting, select 'Boot Existing OS' from the boot menu.  </string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="label_4">
-     <property name="text">
-      <string/>
+      <string>Remember: After rebooting, 
+ select 'Boot Existing OS' from the boot menu.  </string>
      </property>
     </widget>
    </item>
@@ -71,9 +64,9 @@
     </widget>
    </item>
    <item>
-    <widget class="QScrollBar" name="horizontalScrollBar">
-     <property name="orientation">
-      <enum>Qt::Orientation::Horizontal</enum>
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </item>
