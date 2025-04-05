@@ -6,6 +6,7 @@
 #include "./ui_user.h"
 #include "./ui_install.h"
 #include "./ui_finish.h"
+#include "./ui_packages.h"
 #include <QJsonObject>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -56,8 +57,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui->stackedWidget->addWidget(partitionPage);
 
     connect(partitionPage, &Partition::nextButtonClicked,  // FIXED: No parentheses!
-            this, &MainWindow::switchToInstallPage);
+            this, &MainWindow::switchToPackagesPage);
 
+
+    Packages* packagesPage= new Packages();
+    ui->stackedWidget->addWidget(packagesPage);
+    connect(packagesPage, &Packages::nextButtonClicked,  // FIXED: No parentheses!
+            this, &MainWindow::switchToInstallPage);
 
 
 
@@ -123,14 +129,17 @@ void MainWindow::switchToPartitionPage(){
 
 void MainWindow::switchToInstallPage()
 {
-    ui->stackedWidget->setCurrentIndex(6);
+    ui->stackedWidget->setCurrentIndex(7);
 }
 
 
 
 void MainWindow::switchToFinishPage()
 {
-    ui->stackedWidget->setCurrentIndex(7);
+    ui->stackedWidget->setCurrentIndex(8);
 }
 
-
+void MainWindow::switchToPackagesPage()
+{
+    ui->stackedWidget->setCurrentIndex(6);
+}

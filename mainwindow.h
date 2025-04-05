@@ -10,6 +10,7 @@
 #include "user.h"
 #include "install.h"
 #include "finish.h"
+#include "packages.h"
 #include <QJsonObject>
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -33,6 +34,7 @@ private slots:
     void switchToPartitionPage();
     void switchToInstallPage();
     void switchToFinishPage();
+    void switchToPackagesPage();
 
 private:
     Ui::MainWindow *ui;

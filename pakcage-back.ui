@@ -1,0 +1,1153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Packages</class>
+ <widget class="QWidget" name="Packages">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>644</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Package Selection</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <widget class="QWidget" name="tabComputerScience">
+      <attribute name="title">
+       <string>Computer Science</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_CS">
+       <item>
+        <widget class="QToolBox" name="toolBoxCS">
+         <widget class="QWidget" name="pageGeneralDev">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>746</width>
+            <height>737</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string/>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_GeneralDev">
+           <item>
+            <widget class="QGroupBox" name="groupCompilers">
+             <property name="title">
+              <string>Compilers</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_Compilers">
+              <item>
+               <widget class="QCheckBox" name="chkGCC">
+                <property name="text">
+                 <string>GCC</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkClang">
+                <property name="text">
+                 <string>Clang</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkRust">
+                <property name="text">
+                 <string>Rustc</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkllvm">
+                <property name="text">
+                 <string>LLVM</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkgc">
+                <property name="text">
+                 <string>GC</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupIDEs">
+             <property name="title">
+              <string>IDEs</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_IDEs">
+              <item>
+               <widget class="QCheckBox" name="chkVSCode">
+                <property name="text">
+                 <string>VS Code</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkVim">
+                <property name="text">
+                 <string>Vim</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkEmacs">
+                <property name="text">
+                 <string>Emacs</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkJetBrains">
+                <property name="text">
+                 <string>JetBrains IDE</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkcodeblock">
+                <property name="text">
+                 <string>Codeblocks</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBuildtools">
+             <property name="title">
+              <string>Build tools</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_Buildtools">
+              <item>
+               <widget class="QCheckBox" name="chkCmake">
+                <property name="text">
+                 <string>Cmake</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkMake">
+                <property name="text">
+                 <string>Make</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkNinja">
+                <property name="text">
+                 <string>Ninja</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkMeson">
+                <property name="text">
+                 <string>Meson</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupVersionControl">
+             <property name="title">
+              <string>Version Control and Repository Management Tools</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_VersionControl">
+              <item>
+               <widget class="QCheckBox" name="chkgit">
+                <property name="text">
+                 <string>Git</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkGithubCLI">
+                <property name="text">
+                 <string>Github CLI</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkGitlabCLI">
+                <property name="text">
+                 <string>Gitlab CLI</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupDebugging">
+             <property name="title">
+              <string>Debugging tools</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_Debuggingtools">
+              <item>
+               <widget class="QCheckBox" name="chkgdb">
+                <property name="text">
+                 <string>GDB</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkValgrind">
+                <property name="text">
+                 <string>Valgrind</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkStrace">
+                <property name="text">
+                 <string>Strace</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageWebDev">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>314</width>
+            <height>670</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string/>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_WebDev">
+           <item>
+            <widget class="QGroupBox" name="groupLanguage">
+             <property name="title">
+              <string>Language</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_Language">
+              <item>
+               <widget class="QCheckBox" name="chkJava">
+                <property name="text">
+                 <string>Java</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkPHP">
+                <property name="text">
+                 <string>PHP</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkPython3">
+                <property name="text">
+                 <string>Python 3</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkGo">
+                <property name="text">
+                 <string>Go</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkRustWeb">
+                <property name="text">
+                 <string>Rust</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupPackageManagers">
+             <property name="title">
+              <string>Package Managers</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_PackageManagers">
+              <item>
+               <widget class="QCheckBox" name="chkNpm">
+                <property name="text">
+                 <string>npm (for React, Node.js, Angular)</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkPip">
+                <property name="text">
+                 <string>pip (for Django, Flask)</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkPHPComposer">
+                <property name="text">
+                 <string>PHP Composer (for Laravel, Symfony)</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkMaven">
+                <property name="text">
+                 <string>Maven (for Spring Boot)</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkGin">
+                <property name="text">
+                 <string>Gin (for Gin Web Framework)</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkCargo">
+                <property name="text">
+                 <string>Cargo (for Rust)</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkRestfulAPI">
+                <property name="text">
+                 <string>Restful API Tools</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupTesting">
+             <property name="title">
+              <string>Testing</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_Testing">
+              <item>
+               <widget class="QCheckBox" name="chkSelenium">
+                <property name="text">
+                 <string>Selenium</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkJest">
+                <property name="text">
+                 <string>Jest</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkCypress">
+                <property name="text">
+                 <string>Cypress</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupDatabase">
+             <property name="title">
+              <string>Database</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_Database">
+              <item>
+               <widget class="QCheckBox" name="chkMySQL">
+                <property name="text">
+                 <string>MySQL</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkMariaDB">
+                <property name="text">
+                 <string>MariaDB</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkMongoDB">
+                <property name="text">
+                 <string>MongoDB</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkSQLite">
+                <property name="text">
+                 <string>SQLite</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageDevOpsCloud">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>248</width>
+            <height>488</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string/>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_DevOpsCloud">
+           <item>
+            <widget class="QGroupBox" name="groupContainer">
+             <property name="title">
+              <string>Containers</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_Container">
+              <item>
+               <widget class="QCheckBox" name="chkDocker">
+                <property name="text">
+                 <string>Docker</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkPodman">
+                <property name="text">
+                 <string>Podman</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkKubernetes">
+                <property name="text">
+                 <string>Kubernetes</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupIac">
+             <property name="title">
+              <string>Infrastructure as Code (IaC)</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_Iac">
+              <item>
+               <widget class="QCheckBox" name="chkTerraform">
+                <property name="text">
+                 <string>Terraform</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkAnsible">
+                <property name="text">
+                 <string>Ansible</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupCloudTools">
+             <property name="title">
+              <string>Cloud Tools</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_CloudTools">
+              <item>
+               <widget class="QCheckBox" name="chkAWSCLI">
+                <property name="text">
+                 <string>AWS CLI</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkAzureCLI">
+                <property name="text">
+                 <string>Azure CLI</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkGoogleCloudSDK">
+                <property name="text">
+                 <string>Google Cloud SDK</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupMonitoring">
+             <property name="title">
+              <string>Monitoring</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_Monitoring">
+              <item>
+               <widget class="QCheckBox" name="chkGrafana">
+                <property name="text">
+                 <string>Grafana</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkNagios">
+                <property name="text">
+                 <string>Nagios</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkPrometheus">
+                <property name="text">
+                 <string>Prometheus</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkMonitoringSQLite">
+                <property name="text">
+                 <string>SQLite</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageMobileDev">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>220</width>
+            <height>131</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string/>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_MobileDev">
+           <item>
+            <widget class="QGroupBox" name="groupMobileDev">
+             <property name="title">
+              <string>Mobile Development Tools</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_MobileDevTools">
+              <item>
+               <widget class="QCheckBox" name="chkAndroidStudio">
+                <property name="text">
+                 <string>Android Studio</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkKotlin">
+                <property name="text">
+                 <string>Kotlin</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkReactNative">
+                <property name="text">
+                 <string>React Native</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageCyberSecurityNetworking">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>173</width>
+            <height>447</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string/>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_CyberSecNet">
+           <item>
+            <widget class="QGroupBox" name="groupNetworkAnalysis">
+             <property name="title">
+              <string>Network Analysis</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_NetworkAnalysis">
+              <item>
+               <widget class="QCheckBox" name="chkWireshark">
+                <property name="text">
+                 <string>Wireshark</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkNmap">
+                <property name="text">
+                 <string>Nmap</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkOpenVPN">
+                <property name="text">
+                 <string>OpenVPN</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkNetcat">
+                <property name="text">
+                 <string>Netcat</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkCurl">
+                <property name="text">
+                 <string>cURL</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkWget">
+                <property name="text">
+                 <string>Wget</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkWireguard">
+                <property name="text">
+                 <string>WireGuard</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupPentesting">
+             <property name="title">
+              <string>Pentesting</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_Pentesting">
+              <item>
+               <widget class="QCheckBox" name="chkMetasploit">
+                <property name="text">
+                 <string>Metasploit</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkBurpsuite">
+                <property name="text">
+                 <string>Burp Suite</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkJohnTheRipper">
+                <property name="text">
+                 <string>John the Ripper</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupSecurityTools">
+             <property name="title">
+              <string>Security Tools</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_SecurityTools">
+              <item>
+               <widget class="QCheckBox" name="chkAircrack">
+                <property name="text">
+                 <string>Aircrack-ng</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkHashcat">
+                <property name="text">
+                 <string>Hashcat</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageMLAIDatascience">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>255</width>
+            <height>447</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string/>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_MLAIDatascience">
+           <item>
+            <widget class="QGroupBox" name="groupPythonLibraries">
+             <property name="title">
+              <string>Python Libraries &amp; Frameworks</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_PythonLibraries">
+              <item>
+               <widget class="QCheckBox" name="chkScikitLearn">
+                <property name="text">
+                 <string>scikit-learn</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkTensorFlow">
+                <property name="text">
+                 <string>TensorFlow</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkPyTorch">
+                <property name="text">
+                 <string>PyTorch</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkPandas">
+                <property name="text">
+                 <string>Pandas</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkNumPy">
+                <property name="text">
+                 <string>NumPy</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupDataVisualization">
+             <property name="title">
+              <string>Data Visualization</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_DataViz">
+              <item>
+               <widget class="QCheckBox" name="chkMatplotlib">
+                <property name="text">
+                 <string>Matplotlib</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkSeaborn">
+                <property name="text">
+                 <string>Seaborn</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkPlotly">
+                <property name="text">
+                 <string>Plotly</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBigDataRTools">
+             <property name="title">
+              <string>Big Data &amp; R Tools</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_BigDataR">
+              <item>
+               <widget class="QCheckBox" name="chkSpark">
+                <property name="text">
+                 <string>Apache Spark</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkHadoop">
+                <property name="text">
+                 <string>Hadoop</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkRStudio">
+                <property name="text">
+                 <string>RStudio</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chkCaret">
+                <property name="text">
+                 <string>caret</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabPhysics">
+      <attribute name="title">
+       <string>Physics</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_Physics">
+       <item>
+        <widget class="QGroupBox" name="groupComputationPhysics">
+         <property name="title">
+          <string>Computation Physics</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_ComputationPhysics">
+          <item>
+           <widget class="QCheckBox" name="chkROOT">
+            <property name="text">
+             <string>ROOT</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkGeant4">
+            <property name="text">
+             <string>Geant4</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkOpenFOAM">
+            <property name="text">
+             <string>OpenFOAM</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkLAMMPS">
+            <property name="text">
+             <string>LAMMPS</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkQuantumEspresso">
+            <property name="text">
+             <string>Quantum Espresso</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupSimulationModelling">
+         <property name="title">
+          <string>Simulation and Modelling</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_SimulationModelling">
+          <item>
+           <widget class="QCheckBox" name="chkGromacs">
+            <property name="text">
+             <string>Gromacs</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkParaView">
+            <property name="text">
+             <string>ParaView</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkBlender">
+            <property name="text">
+             <string>Blender</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkSimulation">
+            <property name="text">
+             <string>Simulation Tools</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupAstronomy">
+         <property name="title">
+          <string>Astronomy and Astrophysics Tools</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_Astronomy">
+          <item>
+           <widget class="QCheckBox" name="chkStellarium">
+            <property name="text">
+             <string>Stellarium</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkAstroPy">
+            <property name="text">
+             <string>AstroPy</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkSAOImageDS9">
+            <property name="text">
+             <string>SAOImage DS9</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkCelestia">
+            <property name="text">
+             <string>Celestia</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabMathematics">
+      <attribute name="title">
+       <string>Mathematics</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_Mathematics">
+       <item>
+        <widget class="QGroupBox" name="groupSymbolicComputation">
+         <property name="title">
+          <string>Symbolic and Numerical Computation</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_SymbolicComputation">
+          <item>
+           <widget class="QCheckBox" name="chkSageMath">
+            <property name="text">
+             <string>SageMath</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkMaxima">
+            <property name="text">
+             <string>Maxima</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkSympy">
+            <property name="text">
+             <string>Sympy</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkOctave">
+            <property name="text">
+             <string>Octave</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupStatisticalAnalysis">
+         <property name="title">
+          <string>Statistical Analysis</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_StatisticalAnalysis">
+          <item>
+           <widget class="QCheckBox" name="chkR">
+            <property name="text">
+             <string>R</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkJupyterNotebook">
+            <property name="text">
+             <string>Jupyter Notebook</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkPSPP">
+            <property name="text">
+             <string>PSPP</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkGretl">
+            <property name="text">
+             <string>Gretl</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupVisualization">
+         <property name="title">
+          <string>Visualization</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_Visualization">
+          <item>
+           <widget class="QCheckBox" name="chkGnuplot">
+            <property name="text">
+             <string>Gnuplot</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkMatplotlib">
+            <property name="text">
+             <string>Matplotlib</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupTypesettingPublishing">
+         <property name="title">
+          <string>Typesetting and Publishing</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_TypesettingPublishing">
+          <item>
+           <widget class="QCheckBox" name="chkTeXmaker">
+            <property name="text">
+             <string>TeXmaker</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkLyX">
+            <property name="text">
+             <string>LyX</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkTeXstudio">
+            <property name="text">
+             <string>TeXstudio</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkZotero">
+            <property name="text">
+             <string>Zotero</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutButtons">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnBack">
+       <property name="text">
+        <string>&amp;Back</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="package_btn">
+       <property name="text">
+        <string>&amp;Next</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+

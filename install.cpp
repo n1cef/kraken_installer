@@ -9,6 +9,7 @@
 #include <QDebug>
 #include <QTextCursor>
 #include <QProcessEnvironment>
+#include <QJsonArray>
 
 Install::Install(QWidget *parent)
     : QWidget(parent)
@@ -99,6 +100,15 @@ void Install::on_install_btn_clicked()
     // Extract parameters
     QJsonObject partition = settings["partition"].toObject();
     QJsonObject user = settings["user"].toObject();
+    QJsonArray packagesArray = settings["packages"].toArray();
+
+
+    QString packagesParam;
+    foreach(const QJsonValue &pkg, packagesArray) {
+        packagesParam += pkg.toString() + ",";
+    }
+    if(!packagesParam.isEmpty()) packagesParam.chop(1);
+
 
     QStringList params = {
         partition["disk_path"].toString(),
@@ -109,7 +119,8 @@ void Install::on_install_btn_clicked()
         settings["language"].toString(),
         settings["keyboard"].toString(),
         user["hostname"].toString(),
-        settings["timezone"].toString()
+        settings["timezone"].toString(),
+         packagesParam
     };
 
     appendToConsole("Starting installation...", Qt::blue);
