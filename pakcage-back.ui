@@ -7,17 +7,139 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>644</height>
+    <height>936</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Package Selection</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">
+    /* Base Styles */
+    QWidget {
+        background-color: #0a0e14;
+        color: #ffffff;
+        font-family: 'SpaceMono Nerd Font';
+    }
+    
+    /* Tab Widget */
+    QTabWidget::pane {
+        border: 2px solid #4fc3f7;
+        border-radius: 5px;
+        margin: 5px;
+    }
+    QTabBar::tab {
+        background: #1e1e1e;
+        color: #a0a0c0;
+        padding: 12px 24px;
+        border: 1px solid #363644;
+        border-bottom: none;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        font-size: 14px;
+    }
+    QTabBar::tab:selected {
+        background: #363644;
+        color: #4fc3f7;
+        border-color: #4fc3f7;
+    }
+    QTabBar::tab:hover {
+        background: #2d2d39;
+    }
+    
+    /* Group Boxes */
+    QGroupBox {
+        color: #64d2ff;
+        font-size: 16px;
+        border: 2px solid #4fc3f7;
+        border-radius: 5px;
+        margin: 10px;
+        padding-top: 25px;
+    }
+    QGroupBox::title {
+        subcontrol-origin: margin;
+        left: 10px;
+        padding: 0 5px;
+    }
+    
+    /* Checkboxes */
+    QCheckBox {
+        color: #a0a0c0;
+        spacing: 8px;
+        font-size: 14px;
+        margin: 4px 0;
+    }
+    QCheckBox::indicator {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #4fc3f7;
+        border-radius: 4px;
+    }
+    QCheckBox::indicator:checked {
+        background-color: #4fc3f7;
+    }
+    QCheckBox:hover {
+        color: #ffffff;
+    }
+    
+    /* Tool Box */
+    QToolBox::tab {
+        background: #1e1e1e;
+        color: #a0a0c0;
+        padding: 12px;
+        border: 1px solid #363644;
+        border-radius: 5px;
+        margin: 4px 0;
+        font-size: 14px;
+    }
+    QToolBox::tab:selected {
+        background: #363644;
+        color: #4fc3f7;
+        border-color: #4fc3f7;
+    }
+    QToolBox::tab:hover {
+        background: #2d2d39;
+    }
+    
+    /* Scroll Bars */
+    QScrollBar:vertical {
+        background: #1e1e1e;
+        width: 10px;
+        border-radius: 5px;
+    }
+    QScrollBar::handle:vertical {
+        background: #4fc3f7;
+        min-height: 20px;
+        border-radius: 5px;
+    }
+    QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+        border: none;
+        background: none;
+    }
+    
+    /* Buttons */
+    QPushButton {
+        color: #64d2ff;
+        background-color: rgba(30, 30, 30, 0.7);
+        border: 2px solid #4fc3f7;
+        border-radius: 5px;
+        padding: 10px 30px;
+        font-size: 16px;
+        min-width: 100px;
+    }
+    QPushButton:hover {
+        background-color: rgba(79, 195, 247, 0.2);
+    }
+    QPushButton:pressed {
+        background-color: rgba(79, 195, 247, 0.4);
+    }
+   </string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tabComputerScience">
       <attribute name="title">
@@ -26,19 +148,40 @@
       <layout class="QVBoxLayout" name="verticalLayout_CS">
        <item>
         <widget class="QToolBox" name="toolBoxCS">
+         <property name="styleSheet">
+          <string notr="true">
+           QToolBox &gt; QWidget {
+               background: #1e1e1e;
+               padding: 10px;
+               border: 1px solid #363644;
+               border-radius: 5px;
+              
+           }
+          </string>
+         </property>
          <widget class="QWidget" name="pageGeneralDev">
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>0</y>
-            <width>746</width>
-            <height>737</height>
+            <y>-164</y>
+            <width>718</width>
+            <height>1150</height>
            </rect>
           </property>
           <attribute name="label">
-           <string/>
+           <string>General Development Tools</string>
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_GeneralDev">
+           <item>
+            <widget class="QLabel" name="lblGeneralDevTitle">
+             <property name="styleSheet">
+              <string notr="true">font-size: 18px; color: #4fc3f7; font-weight: bold; margin-bottom: 10px;</string>
+             </property>
+             <property name="text">
+              <string>General Development Tools</string>
+             </property>
+            </widget>
+           </item>
            <item>
             <widget class="QGroupBox" name="groupCompilers">
              <property name="title">
@@ -230,15 +373,25 @@
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>0</y>
-            <width>314</width>
-            <height>670</height>
+            <y>-83</y>
+            <width>718</width>
+            <height>1045</height>
            </rect>
           </property>
           <attribute name="label">
-           <string/>
+           <string>Web Development Tools</string>
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_WebDev">
+           <item>
+            <widget class="QLabel" name="lblGeneralDevTitle">
+             <property name="styleSheet">
+              <string notr="true">font-size: 18px; color: #4fc3f7; font-weight: bold; margin-bottom: 10px;</string>
+             </property>
+             <property name="text">
+              <string>Web Development Tools</string>
+             </property>
+            </widget>
+           </item>
            <item>
             <widget class="QGroupBox" name="groupLanguage">
              <property name="title">
@@ -415,14 +568,24 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>248</width>
-            <height>488</height>
+            <width>718</width>
+            <height>779</height>
            </rect>
           </property>
           <attribute name="label">
-           <string/>
+           <string>DevOps &amp; Cloud Tools</string>
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_DevOpsCloud">
+           <item>
+            <widget class="QLabel" name="lblDevOpsTitle">
+             <property name="styleSheet">
+              <string notr="true">font-size: 18px; color: #4fc3f7; font-weight: bold; margin-bottom: 10px;</string>
+             </property>
+             <property name="text">
+              <string>DevOps &amp; Cloud Tools</string>
+             </property>
+            </widget>
+           </item>
            <item>
             <widget class="QGroupBox" name="groupContainer">
              <property name="title">
@@ -550,12 +713,12 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>220</width>
-            <height>131</height>
+            <width>728</width>
+            <height>570</height>
            </rect>
           </property>
           <attribute name="label">
-           <string/>
+           <string>Mobile Development Tools</string>
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_MobileDev">
            <item>
@@ -595,12 +758,12 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>173</width>
-            <height>447</height>
+            <width>718</width>
+            <height>669</height>
            </rect>
           </property>
           <attribute name="label">
-           <string/>
+           <string>Cybersecurity &amp; Networking</string>
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_CyberSecNet">
            <item>
@@ -721,12 +884,12 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>255</width>
-            <height>447</height>
+            <width>718</width>
+            <height>669</height>
            </rect>
           </property>
           <attribute name="label">
-           <string/>
+           <string>AI/ML &amp; Data Science</string>
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_MLAIDatascience">
            <item>
@@ -1150,4 +1313,3 @@
  <resources/>
  <connections/>
 </ui>
-

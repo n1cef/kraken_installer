@@ -11,7 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>User Configuration</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #0a0e14;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -20,13 +23,17 @@
       <font>
        <pointsize>40</pointsize>
        <bold>true</bold>
+       <family>SpaceMono Nerd Font</family>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:&quot;blue&quot;</string>
+      <string notr="true">color: #4fc3f7;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #1e1e1e;
+        margin-bottom: 30px;</string>
      </property>
      <property name="text">
-      <string>User Configuration</string>
+      <string>USER CONFIGURATION</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -38,7 +45,11 @@
      <property name="font">
       <font>
        <pointsize>20</pointsize>
+       <family>SpaceMono Nerd Font</family>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #64d2ff;</string>
      </property>
      <property name="text">
       <string>Hostname:</string>
@@ -47,6 +58,25 @@
    </item>
    <item>
     <widget class="QLineEdit" name="hostnameEdit">
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <family>SpaceMono Nerd Font</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+        QLineEdit {
+          background-color: #1e1e1e;
+          color: #ffffff;
+          border: 2px solid #4fc3f7;
+          border-radius: 5px;
+          padding: 8px;
+          selection-background-color: #4fc3f7;
+          selection-color: #000000;
+        }
+      </string>
+     </property>
      <property name="placeholderText">
       <string>Enter system hostname</string>
      </property>
@@ -57,8 +87,11 @@
      <property name="font">
       <font>
        <pointsize>20</pointsize>
-       <bold>false</bold>
+       <family>SpaceMono Nerd Font</family>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #64d2ff;</string>
      </property>
      <property name="text">
       <string>Username:</string>
@@ -67,6 +100,25 @@
    </item>
    <item>
     <widget class="QLineEdit" name="usernameEdit">
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <family>SpaceMono Nerd Font</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+        QLineEdit {
+          background-color: #1e1e1e;
+          color: #ffffff;
+          border: 2px solid #4fc3f7;
+          border-radius: 5px;
+          padding: 8px;
+          selection-background-color: #4fc3f7;
+          selection-color: #000000;
+        }
+      </string>
+     </property>
      <property name="maxLength">
       <number>32</number>
      </property>
@@ -80,8 +132,11 @@
      <property name="font">
       <font>
        <pointsize>20</pointsize>
-       <bold>false</bold>
+       <family>SpaceMono Nerd Font</family>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #64d2ff;</string>
      </property>
      <property name="text">
       <string>Password:</string>
@@ -90,11 +145,30 @@
    </item>
    <item>
     <widget class="QLineEdit" name="passwordEdit">
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <family>SpaceMono Nerd Font</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+        QLineEdit {
+          background-color: #1e1e1e;
+          color: #ffffff;
+          border: 2px solid #4fc3f7;
+          border-radius: 5px;
+          padding: 8px;
+          selection-background-color: #4fc3f7;
+          selection-color: #000000;
+        }
+      </string>
+     </property>
      <property name="echoMode">
       <enum>QLineEdit::EchoMode::Password</enum>
      </property>
      <property name="placeholderText">
-      <string>Enter your user password </string>
+      <string>Enter your user password</string>
      </property>
     </widget>
    </item>
@@ -103,7 +177,11 @@
      <property name="font">
       <font>
        <pointsize>20</pointsize>
+       <family>SpaceMono Nerd Font</family>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #64d2ff;</string>
      </property>
      <property name="text">
       <string>Confirm Password:</string>
@@ -112,6 +190,25 @@
    </item>
    <item>
     <widget class="QLineEdit" name="confirmPassEdit">
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <family>SpaceMono Nerd Font</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+        QLineEdit {
+          background-color: #1e1e1e;
+          color: #ffffff;
+          border: 2px solid #4fc3f7;
+          border-radius: 5px;
+          padding: 8px;
+          selection-background-color: #4fc3f7;
+          selection-color: #000000;
+        }
+      </string>
+     </property>
      <property name="echoMode">
       <enum>QLineEdit::EchoMode::Password</enum>
      </property>
@@ -121,18 +218,53 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="user_btn">
-     <property name="minimumSize">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
       <size>
-       <width>120</width>
+       <width>20</width>
        <height>40</height>
       </size>
      </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QPushButton" name="user_btn">
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+       <bold>true</bold>
+       <family>SpaceMono Nerd Font</family>
+      </font>
+     </property>
      <property name="styleSheet">
-      <string notr="true">font: bold 14pt;color:&quot;cyan&quot;;</string>
+      <string notr="true">
+        QPushButton {
+          color: #64d2ff;
+          background-color: rgba(30, 30, 30, 0.7);
+          border: 2px solid #4fc3f7;
+          border-radius: 5px;
+          padding: 10px 30px;
+        }
+        QPushButton:hover {
+          background-color: rgba(79, 195, 247, 0.2);
+        }
+        QPushButton:pressed {
+          background-color: rgba(79, 195, 247, 0.4);
+          border-color: #64d2ff;
+        }
+      </string>
      </property>
      <property name="text">
-      <string>Next</string>
+      <string>NEXT</string>
      </property>
     </widget>
    </item>

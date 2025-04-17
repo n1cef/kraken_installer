@@ -14,26 +14,25 @@
    <string>Software Installation</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: #0a0e14;</string>
+   <string notr="true">background-color: #f5f5f5;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="label">
      <property name="font">
       <font>
-       <family>SpaceMono Nerd Font</family>
        <pointsize>40</pointsize>
        <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: #4fc3f7;
+      <string notr="true">color: #1565C0;
         padding: 10px;
-        border-bottom: 2px solid #363644;
+        border-bottom: 2px solid #64B5F6;
         margin-bottom: 15px;</string>
      </property>
      <property name="text">
-      <string>Installation Progress</string>
+      <string>installation</string>
      </property>
     </widget>
    </item>
@@ -48,16 +47,16 @@
      <property name="font">
       <font>
        <family>SpaceMono Nerd Font</family>
-       <pointsize>14</pointsize>
+       <pointsize>20</pointsize>
        <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: #1e1e1e;
-        border: 2px solid #4fc3f7;
+      <string notr="true">background-color: white;
+        border: 2px solid #BBDEFB;
         border-radius: 5px;
         padding: 10px;
-        color: #ffffff;</string>
+        color: #212121;</string>
      </property>
      <property name="readOnly">
       <bool>true</bool>
@@ -68,17 +67,16 @@
     <widget class="QLabel" name="statusLabel">
      <property name="font">
       <font>
-       <family>SpaceMono Nerd Font</family>
-       <pointsize>16</pointsize>
+       <pointsize>20</pointsize>
        <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: #64d2ff;
+      <string notr="true">color: #0D47A1;
         padding: 5px 0;</string>
      </property>
      <property name="text">
-      <string>Current Operation:</string>
+      <string>Shows current operation:</string>
      </property>
     </widget>
    </item>
@@ -86,8 +84,8 @@
     <widget class="QProgressBar" name="progressBar">
      <property name="font">
       <font>
-       <family>SpaceMono Nerd Font</family>
-       <pointsize>12</pointsize>
+       <pointsize>20</pointsize>
+       <bold>false</bold>
       </font>
      </property>
      <property name="value">
@@ -96,15 +94,13 @@
      <property name="styleSheet">
       <string notr="true">
         QProgressBar {
-          border: 2px solid #4fc3f7;
+          border: 2px solid #BBDEFB;
           border-radius: 5px;
           text-align: center;
           height: 25px;
-          color: #ffffff;
-          background: #1e1e1e;
         }
         QProgressBar::chunk {
-          background-color: #4fc3f7;
+          background-color: #42A5F5;
           border-radius: 3px;
         }
       </string>
@@ -115,31 +111,30 @@
     <widget class="QPushButton" name="install_btn">
      <property name="font">
       <font>
-       <family>SpaceMono Nerd Font</family>
-       <pointsize>16</pointsize>
+       <pointsize>20</pointsize>
        <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
       <string notr="true">
         QPushButton {
-          color: #4fc3f7;
-          background-color: rgba(30, 30, 30, 0.7);
-          border: 2px solid #4fc3f7;
+          color: #00ACC1;
+          background-color: white;
+          border: 2px solid #00ACC1;
           border-radius: 5px;
-          padding: 15px 30px;
+          padding: 10px 20px;
           min-width: 200px;
         }
         QPushButton:hover {
-          background-color: rgba(79, 195, 247, 0.2);
+          background-color: #E0F7FA;
         }
         QPushButton:pressed {
-          background-color: rgba(79, 195, 247, 0.4);
+          background-color: #B2EBF2;
         }
       </string>
      </property>
      <property name="text">
-      <string>Start Installation</string>
+      <string>Start installation</string>
      </property>
     </widget>
    </item>

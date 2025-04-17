@@ -11,22 +11,32 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Disk Partitioning</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #0a0e14;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="label">
      <property name="font">
       <font>
+       <family>SpaceMono Nerd Font</family>
        <pointsize>40</pointsize>
        <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:&quot;blue&quot;;</string>
+      <string notr="true">color: #4fc3f7;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #1e1e1e;
+        margin-bottom: 20px;</string>
      </property>
      <property name="text">
-      <string> Disk partition </string>
+      <string>DISK PARTITIONING</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>
@@ -34,9 +44,43 @@
     <widget class="QTreeWidget" name="diskTreeWidget">
      <property name="font">
       <font>
-       <pointsize>15</pointsize>
-       <bold>true</bold>
+       <family>SpaceMono Nerd Font</family>
+       <pointsize>16</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+        QTreeWidget {
+          background-color: #1e1e1e;
+          color: #ffffff;
+          border: 2px solid #4fc3f7;
+          border-radius: 5px;
+          padding: 8px;
+        }
+        QHeaderView::section {
+          background-color: #363644;
+          color: #64d2ff;
+          padding: 8px;
+          border: none;
+        }
+        QTreeWidget::item {
+          padding: 12px;
+          border-bottom: 1px solid #3a3a3a;
+        }
+        QTreeWidget::item:selected {
+          background-color: #4fc3f7;
+          color: #000000;
+        }
+        QScrollBar:vertical {
+          background: #1e1e1e;
+          width: 10px;
+        }
+        QScrollBar::handle:vertical {
+          background: #4fc3f7;
+          min-height: 20px;
+          border-radius: 5px;
+        }
+      </string>
      </property>
      <column>
       <property name="text">
@@ -59,15 +103,32 @@
     <widget class="QPushButton" name="refreshButton">
      <property name="font">
       <font>
-       <pointsize>20</pointsize>
+       <family>SpaceMono Nerd Font</family>
+       <pointsize>16</pointsize>
        <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:&quot;green&quot;</string>
+      <string notr="true">
+        QPushButton {
+          color: #64d2ff;
+          background-color: rgba(30, 30, 30, 0.7);
+          border: 2px solid #4fc3f7;
+          border-radius: 5px;
+          padding: 10px 20px;
+          margin: 10px 0;
+        }
+        QPushButton:hover {
+          background-color: rgba(79, 195, 247, 0.2);
+        }
+        QPushButton:pressed {
+          background-color: rgba(79, 195, 247, 0.4);
+          border-color: #64d2ff;
+        }
+      </string>
      </property>
      <property name="text">
-      <string>Refrech disks </string>
+      <string>REFRESH DISKS</string>
      </property>
     </widget>
    </item>
@@ -75,15 +136,19 @@
     <widget class="QLabel" name="diskWarningLabel">
      <property name="font">
       <font>
-       <pointsize>30</pointsize>
+       <family>SpaceMono Nerd Font</family>
+       <pointsize>18</pointsize>
        <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:&quot;red&quot;;</string>
+      <string notr="true">color: #ff4444; padding: 15px; background-color: rgba(255, 68, 68, 0.1); border-radius: 5px;</string>
      </property>
      <property name="text">
-      <string>Minimum 50GB required please shose another disk</string>
+      <string>⚠ Minimum 50GB required - Select another disk</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>
@@ -91,9 +156,26 @@
     <widget class="QCheckBox" name="homeCheckBox">
      <property name="font">
       <font>
-       <pointsize>20</pointsize>
-       <bold>true</bold>
+       <family>SpaceMono Nerd Font</family>
+       <pointsize>16</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+        QCheckBox {
+          color: #a0a0c0;
+          spacing: 8px;
+        }
+        QCheckBox::indicator {
+          width: 20px;
+          height: 20px;
+          border: 2px solid #4fc3f7;
+          border-radius: 4px;
+        }
+        QCheckBox::indicator:checked {
+          background-color: #4fc3f7;
+        }
+      </string>
      </property>
      <property name="text">
       <string>Create separate /home partition</string>
@@ -107,9 +189,26 @@
     <widget class="QCheckBox" name="swapCheckBox">
      <property name="font">
       <font>
-       <pointsize>20</pointsize>
-       <bold>true</bold>
+       <family>SpaceMono Nerd Font</family>
+       <pointsize>16</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+        QCheckBox {
+          color: #a0a0c0;
+          spacing: 8px;
+        }
+        QCheckBox::indicator {
+          width: 20px;
+          height: 20px;
+          border: 2px solid #4fc3f7;
+          border-radius: 4px;
+        }
+        QCheckBox::indicator:checked {
+          background-color: #4fc3f7;
+        }
+      </string>
      </property>
      <property name="text">
       <string>Enable swap partition</string>
@@ -123,34 +222,86 @@
     <widget class="QCheckBox" name="confirmCheckBox">
      <property name="font">
       <font>
-       <pointsize>20</pointsize>
+       <family>SpaceMono Nerd Font</family>
+       <pointsize>16</pointsize>
        <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: #cc0000; font-weight: bold;</string>
+      <string notr="true">
+        QCheckBox {
+          color: #ff4444;
+          spacing: 8px;
+        }
+        QCheckBox::indicator {
+          width: 20px;
+          height: 20px;
+          border: 2px solid #ff4444;
+          border-radius: 4px;
+        }
+        QCheckBox::indicator:checked {
+          background-color: #ff4444;
+        }
+      </string>
      </property>
      <property name="text">
-      <string>I understand ALL DATA ON THIS DISK WILL BE ERASED</string>
+      <string>I UNDERSTAND ALL DATA ON THIS DISK WILL BE ERASED</string>
      </property>
     </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
    </item>
    <item>
     <widget class="QPushButton" name="partition_btn">
      <property name="minimumSize">
       <size>
-       <width>120</width>
-       <height>40</height>
+       <width>200</width>
+       <height>60</height>
       </size>
      </property>
      <property name="font">
       <font>
-       <pointsize>14</pointsize>
+       <family>SpaceMono Nerd Font</family>
+       <pointsize>20</pointsize>
        <bold>true</bold>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">
+        QPushButton {
+          color: #64d2ff;
+          background-color: rgba(30, 30, 30, 0.7);
+          border: 2px solid #4fc3f7;
+          border-radius: 5px;
+          padding: 10px 40px;
+          margin: 20px;
+        }
+        QPushButton:hover {
+          background-color: rgba(79, 195, 247, 0.2);
+        }
+        QPushButton:pressed {
+          background-color: rgba(79, 195, 247, 0.4);
+          border-color: #64d2ff;
+        }
+        QPushButton:disabled {
+          color: #606060;
+          border-color: #606060;
+        }
+      </string>
+     </property>
      <property name="text">
-      <string>Next</string>
+      <string>NEXT</string>
      </property>
     </widget>
    </item>

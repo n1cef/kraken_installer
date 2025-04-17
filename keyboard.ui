@@ -6,30 +6,34 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1080</width>
-    <height>1000</height>
+    <width>1106</width>
+    <height>805</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Keyboard Configuration</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:&quot;#e6e4e4&quot;</string>
+   <string notr="true">background-color: #0a0e14;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="label">
      <property name="font">
       <font>
-       <pointsize>35</pointsize>
+       <family>SpaceMono Nerd Font</family>
+       <pointsize>40</pointsize>
        <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:&quot;blue&quot;;</string>
+      <string notr="true">color: #4fc3f7;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #1e1e1e;
+        margin-bottom: 20px;</string>
      </property>
      <property name="text">
-      <string>keyboard configuration </string>
+      <string>KEYBOARD CONFIGURATION</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -40,50 +44,71 @@
     <widget class="QLabel" name="label_2">
      <property name="font">
       <font>
+       <family>SpaceMono Nerd Font</family>
        <pointsize>20</pointsize>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: #64d2ff;
+        padding-left: 10px;</string>
+     </property>
      <property name="text">
-      <string>Select System Language</string>
+      <string>SELECT SYSTEM LANGUAGE</string>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QComboBox" name="comboBoxLanguage">
-     <property name="layoutDirection">
-      <enum>Qt::LayoutDirection::LeftToRight</enum>
+     <property name="font">
+      <font>
+       <family>SpaceMono Nerd Font</family>
+       <pointsize>16</pointsize>
+      </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">QComboBox {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}</string>
-     </property>
-     <property name="placeholderText">
-      <string/>
-     </property>
-     <property name="duplicatesEnabled">
-      <bool>false</bool>
+      <string notr="true">
+        QComboBox {
+          background-color: #1e1e1e;
+          color: #ffffff;
+          border: 2px solid #4fc3f7;
+          border-radius: 5px;
+          padding: 8px;
+          min-height: 30px;
+        }
+        QComboBox:hover {
+          background-color: #252525;
+        }
+        QComboBox::drop-down {
+          border: none;
+          width: 30px;
+        }
+        QComboBox::down-arrow {
+          image: url(:/images/arrow-down.png);
+          width: 16px;
+          height: 16px;
+        }
+        QComboBox QAbstractItemView {
+          background-color: #1e1e1e;
+          color: #ffffff;
+          selection-background-color: #4fc3f7;
+          selection-color: #000000;
+          border: 2px solid #4fc3f7;
+        }
+      </string>
      </property>
      <item>
       <property name="text">
-       <string>French</string>
+       <string>English (United States)</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>English</string>
+       <string>Français (France)</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Arabic</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string/>
+       <string>العربية (Arabic)</string>
       </property>
      </item>
     </widget>
@@ -92,59 +117,176 @@
     <widget class="QLabel" name="label_4">
      <property name="font">
       <font>
+       <family>SpaceMono Nerd Font</family>
        <pointsize>20</pointsize>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: #64d2ff;
+        padding-left: 10px;
+        margin-top: 20px;</string>
+     </property>
      <property name="text">
-      <string>Select Keyboard Layout</string>
+      <string>SELECT KEYBOARD LAYOUT</string>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QComboBox" name="comboBoxKeyboard">
+     <property name="font">
+      <font>
+       <family>SpaceMono Nerd Font</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
      <property name="styleSheet">
-      <string notr="true">QComboBox {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}</string>
+      <string notr="true">
+        QComboBox {
+          background-color: #1e1e1e;
+          color: #ffffff;
+          border: 2px solid #4fc3f7;
+          border-radius: 5px;
+          padding: 8px;
+          min-height: 30px;
+        }
+        QComboBox:hover {
+          background-color: #252525;
+        }
+        QComboBox::drop-down {
+          border: none;
+          width: 30px;
+        }
+        QComboBox::down-arrow {
+          image: url(:/images/arrow-down.png);
+          width: 16px;
+          height: 16px;
+        }
+        QComboBox QAbstractItemView {
+          background-color: #1e1e1e;
+          color: #ffffff;
+          selection-background-color: #4fc3f7;
+          selection-color: #000000;
+          border: 2px solid #4fc3f7;
+        }
+      </string>
      </property>
      <item>
       <property name="text">
-       <string>Azerty</string>
-      </property>
-      <property name="icon">
-       <iconset theme="QIcon::ThemeIcon::Computer"/>
+       <string>QWERTY (US International)</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Qwerty</string>
+       <string>AZERTY (French)</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string/>
+       <string>العربية (Arabic)</string>
       </property>
      </item>
     </widget>
    </item>
    <item>
-    <widget class="QTextEdit" name="textEditPreview"/>
+    <widget class="QLabel" name="label_test">
+     <property name="font">
+      <font>
+       <family>SpaceMono Nerd Font</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #64d2ff;
+        padding-left: 10px;
+        margin-top: 20px;</string>
+     </property>
+     <property name="text">
+      <string>TEST KEYBOARD LAYOUT:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="textEditPreview">
+     <property name="font">
+      <font>
+       <family>SpaceMono Nerd Font</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+        QTextEdit {
+          background-color: #1e1e1e;
+          color: #ffffff;
+          border: 2px solid #4fc3f7;
+          border-radius: 5px;
+          padding: 12px;
+        }
+        QScrollBar:vertical {
+          background: #1e1e1e;
+          width: 10px;
+        }
+        QScrollBar::handle:vertical {
+          background: #4fc3f7;
+          min-height: 20px;
+          border-radius: 5px;
+        }
+      </string>
+     </property>
+     <property name="placeholderText">
+      <string>Type here to test your keyboard layout...</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
    </item>
    <item>
     <widget class="QPushButton" name="keyboard_btn">
+     <property name="minimumSize">
+      <size>
+       <width>200</width>
+       <height>60</height>
+      </size>
+     </property>
      <property name="font">
       <font>
+       <family>SpaceMono Nerd Font</family>
        <pointsize>20</pointsize>
        <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:&quot;cyan&quot;</string>
+      <string notr="true">
+        QPushButton {
+          color: #64d2ff;
+          background-color: rgba(30, 30, 30, 0.7);
+          border: 2px solid #4fc3f7;
+          border-radius: 5px;
+          padding: 10px 40px;
+          margin: 20px;
+        }
+        QPushButton:hover {
+          background-color: rgba(79, 195, 247, 0.2);
+        }
+        QPushButton:pressed {
+          background-color: rgba(79, 195, 247, 0.4);
+          border-color: #64d2ff;
+        }
+      </string>
      </property>
      <property name="text">
-      <string>Next</string>
+      <string>NEXT</string>
      </property>
     </widget>
    </item>

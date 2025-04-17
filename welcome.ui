@@ -7,31 +7,46 @@
     <x>0</x>
     <y>0</y>
     <width>1143</width>
-    <height>711</height>
+    <height>723</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Welcome to Kraken OS</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #2d2d39;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="label">
      <property name="font">
       <font>
+       <family>SpaceMono Nerd Font</family>
        <pointsize>40</pointsize>
        <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:&quot;blue&quot;;</string>
+      <string notr="true">color:#4fc3f7;
+        padding: 20px;
+        margin-bottom: 30px;</string>
      </property>
      <property name="text">
-      <string>  Welcome to kraken os </string>
+      <string>WELCOME TO KRAKEN OS</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QLabel" name="label_2">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
      <property name="text">
       <string/>
      </property>
@@ -41,16 +56,13 @@
      <property name="scaledContents">
       <bool>true</bool>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
     </widget>
    </item>
    <item>
     <widget class="QPushButton" name="welcome_btn">
-     <property name="font">
-      <font>
-       <pointsize>20</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
      <property name="styleSheet">
       <string notr="true">color:&quot;cyan&quot;</string>
      </property>

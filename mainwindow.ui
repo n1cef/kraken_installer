@@ -17,17 +17,63 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Kraken OS Installer</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QMainWindow {
+        background-color: #2d2d39;
+    }
+    QLabel {
+        color: #ffffff;
+    }
+   </string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string notr="true">
+        QStackedWidget {
+            background-color: #363644;
+            border-radius: 15px;
+        }
+        QPushButton {
+            background-color: #4fc3f7;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            min-width: 120px;
+        }
+        QPushButton:hover {
+            background-color: #6fd4ff;
+        }
+        QPushButton:pressed {
+            background-color: #3fb0e0;
+        }
+       </string>
+      </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
       <widget class="QWidget" name="page">
        <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
         <item>
          <widget class="QLabel" name="label_first">
           <property name="maximumSize">
@@ -38,18 +84,19 @@
           </property>
           <property name="font">
            <font>
-            <pointsize>40</pointsize>
+            <pointsize>32</pointsize>
+            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color:&quot;blue&quot;;</string>
+           <string notr="true">color: #4fc3f7;</string>
           </property>
           <property name="text">
-           <string>Welcome to kraken istaller app </string>
+           <string>Welcome to Kraken OS Installer</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignCenter</set>
+           <set>Qt::AlignCenter</set>
           </property>
           <property name="wordWrap">
            <bool>true</bool>
@@ -57,23 +104,104 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="bnt1">
+         <widget class="QLabel" name="label">
           <property name="font">
            <font>
-            <pointsize>20</pointsize>
-            <bold>true</bold>
+            <pointsize>14</pointsize>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">color: #a0a0c0;</string>
+          </property>
           <property name="text">
-           <string>Next</string>
+           <string>This installer will guide you through the process of installing Kraken OS on your computer.</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="bnt1">
+            <property name="font">
+             <font>
+              <pointsize>16</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Get Started →</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="page_2"/>
+      <widget class="QWidget" name="page_2">
+       <!-- Add similar styling for subsequent pages -->
+      </widget>
      </widget>
     </item>
+    
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">

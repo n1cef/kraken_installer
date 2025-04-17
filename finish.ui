@@ -11,7 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Installation Complete</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #0a0e14;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -23,10 +26,16 @@
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:&quot;blue&quot;</string>
+      <string notr="true">color: #4fc3f7;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #1e1e1e;
+        margin-bottom: 20px;</string>
      </property>
      <property name="text">
-      <string>the installation terminate </string>
+      <string>THE INSTALLATION IS COMPLETE</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>
@@ -39,11 +48,18 @@
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:&quot;cyan&quot;;</string>
+      <string notr="true">color: #64d2ff;
+        padding: 15px;
+        background-color: rgba(30, 30, 30, 0.5);
+        border-radius: 5px;
+        border-left: 4px solid #4fc3f7;</string>
      </property>
      <property name="text">
-      <string>Remember: After rebooting, 
- select 'Boot Existing OS' from the boot menu.  </string>
+      <string>IMPORTANT: After rebooting, 
+select 'Boot Existing OS' from the boot menu.</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>
@@ -52,14 +68,25 @@
      <property name="font">
       <font>
        <pointsize>10</pointsize>
+       <family>SpaceMono Nerd Font</family>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: #a5b4c4;
+        padding: 15px;
+        background-color: rgba(30, 30, 30, 0.3);
+        border-radius: 5px;
+        margin-top: 20px;</string>
+     </property>
      <property name="text">
-      <string> **Unix Golden Rules**   
-    • sudo =POWER  → use your superpowers only when necessary.  
-    • Copy-pasting AI-generated commands blindly? Congrats, you just won a Broken System   
-    • You’ve escaped Microsoft’s clutches! 🐧 Welcome to the land of freedom .  
-    • &quot;Bill Gates didn’t send you here. You’re safe now.&quot; </string>
+      <string> **UNIX GOLDEN RULES**   
+    • sudo = POWER → Use your superpowers wisely  
+    • Blindly pasting commands? Enjoy your broken system  
+    • You've escaped proprietary chains! 🐧 Welcome to freedom  
+    • "Bill Gates can't touch you here. You're safe now."</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeft</set>
      </property>
     </widget>
    </item>
@@ -67,6 +94,12 @@
     <widget class="QLabel" name="label_4">
      <property name="text">
       <string/>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
      </property>
     </widget>
    </item>
@@ -87,6 +120,9 @@
      <property name="scaledContents">
       <bool>true</bool>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
    </item>
    <item>
@@ -95,22 +131,46 @@
       <font>
        <pointsize>20</pointsize>
        <bold>true</bold>
+       <family>SpaceMono Nerd Font</family>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:&quot;cyan&quot;</string>
+      <string notr="true">
+        QPushButton {
+          color: #64d2ff;
+          background-color: rgba(30, 30, 30, 0.7);
+          border: 2px solid #4fc3f7;
+          border-radius: 5px;
+          padding: 10px 30px;
+          min-width: 200px;
+        }
+        QPushButton:hover {
+          background-color: rgba(79, 195, 247, 0.2);
+        }
+        QPushButton:pressed {
+          background-color: rgba(79, 195, 247, 0.4);
+          border-color: #64d2ff;
+        }
+      </string>
      </property>
      <property name="text">
-      <string>reboot</string>
+      <string>REBOOT SYSTEM</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QLabel" name="label_2">
-     <property name="font">
-      <font>
-       <kerning>true</kerning>
-      </font>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
      </property>
      <property name="text">
       <string/>
