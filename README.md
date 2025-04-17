@@ -127,11 +127,17 @@ sudo gtk-update-icon-cache /usr/share/icons/hicolor/
 <h1 align="left">  Preview  </h1>
 
 <h3 align="center"> Mainwindo </h3>
+
 ![Alt Text](preview/mainwindow.png)
+
 <h3 align="center"> Welcomme </h3>
+
+
 ![Alt Text](preview/welcome.png)
 
 <h3 align="center"> KEYBOARD CONFIGURATION </h3>
+
+
 ![Alt Text](preview/keyboard.png)
 
 
@@ -141,19 +147,26 @@ sudo gtk-update-icon-cache /usr/share/icons/hicolor/
 
 
 <h3 align="center"> USER CONFIGURATION </h3>
+
+
 ![Alt Text](preview/user.png)
 
 <h3 align="center"> DISK PARTITIONING </h3>
+
+
 ![Alt Text](preview/disk.png)
 
 <h3 align="center"> PACKAGES SELECTION </h3>
+
 ![Alt Text](preview/packages.png)
 
 
 
 <h3 align="center"> Installation Progress </h3>
+
 ![Alt Text](preview/installation.png)
 
 
 <h3 align="center"> Reboot  </h3>
+
 ![Alt Text](preview/finish.png)
