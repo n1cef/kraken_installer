@@ -12,6 +12,23 @@ Partition::Partition(QWidget *parent)
     , ui(new Ui::Partition)
 {
     ui->setupUi(this);
+
+    QHeaderView *header = ui->diskTreeWidget->header();
+
+    // Set minimum width for ALL columns (applies globally)
+    header->setMinimumSectionSize(100); // Sets 100px as the minimum for any column
+
+    // Set initial widths for Device (col 0) and Size (col 1)
+    header->resizeSection(0, 250);  // Device column initial width
+    header->resizeSection(1, 150);  // Size column initial width
+
+    // Allow manual resizing of columns
+    header->setSectionResizeMode(0, QHeaderView::Interactive); // Device
+    header->setSectionResizeMode(1, QHeaderView::Interactive); // Size
+    header->setSectionResizeMode(2, QHeaderView::Stretch);
+
+
+
     connect(ui->diskTreeWidget, &QTreeWidget::itemSelectionChanged,
             this, &Partition::checkDiskSize);
 
